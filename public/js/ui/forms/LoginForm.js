@@ -11,7 +11,7 @@ class LoginForm extends AsyncForm {
      * закрывает окно, в котором находится форма
      * */
     onSubmit(data) {
-        User.login(options, (err, response) => {
+        User.login(data, (err, response) => {
             if (response && response.success) {
                 App.setState('user-logged'); //авторизация
                 App.getModal('login').close(); // Находит окно, в котором находится форма и закрывает его (через метод Modal.close)

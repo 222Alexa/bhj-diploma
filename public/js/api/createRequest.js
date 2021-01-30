@@ -16,7 +16,7 @@ const createRequest = (options = {}) => {
     const formData = new FormData();
     xhr.withCredentials = true;
     xhr.responseType = options.responseType || 'json';
-    const callback = f;
+    
 
     if (options.method === 'GET') {
         options.url += `?`;
